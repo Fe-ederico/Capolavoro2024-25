@@ -1,0 +1,102 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.NewPage1"
+             Title="Partita"
+             BackgroundColor="LightGreen">
+
+    <ScrollView>
+        <StackLayout Padding="10">
+
+            <!-- PULSANTE NUOVO SET -->
+            <Button Text="Nuovo Set"
+                    BackgroundColor="DarkRed"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="NuovoSet"
+                    Margin="0,10,0,10" />
+
+            <CollectionView x:Name="collectionView" ItemsSource="{Binding Giocatori}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="5" Padding="5" BorderColor="Gray">
+                            <StackLayout>
+
+                                <Grid ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Column="0" Text="{Binding Numero}" FontAttributes="Bold" />
+                                    <Label Grid.Column="1" Text="{Binding Maglia}" />
+                                    <Label Grid.Column="2" Text="{Binding Cognome}" />
+                                    <Label Grid.Column="3" Text="{Binding Nome}" />
+                                </Grid>
+
+                                <Grid ColumnSpacing="10" RowSpacing="5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Attacco" HorizontalOptions="Center" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Ricezione" HorizontalOptions="Center" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="Difesa" HorizontalOptions="Center" />
+                                    <Label Grid.Row="0" Grid.Column="3" Text="Battuta" HorizontalOptions="Center" />
+                                    <Label Grid.Row="0" Grid.Column="4" Text="Muro" HorizontalOptions="Center" />
+
+                                    <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Button Text="+1" Clicked="IncrementaAttaccoPositivo" />
+                                        <Button Text="0" Clicked="IncrementaAttaccoNeutro" />
+                                        <Button Text="-1" Clicked="IncrementaAttaccoNegativo" />
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Button Text="+1" Clicked="IncrementaRicezionePositivo" />
+                                        <Button Text="0" Clicked="IncrementaRicezioneNeutro" />
+                                        <Button Text="-1" Clicked="IncrementaRicezioneNegativo" />
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Button Text="+1" Clicked="IncrementaDifesaPositivo" />
+                                        <Button Text="0" Clicked="IncrementaDifesaNeutro" />
+                                        <Button Text="-1" Clicked="IncrementaDifesaNegativo" />
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1" Grid.Column="3" Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Button Text="+1" Clicked="IncrementaBattutaPositivo" />
+                                        <Button Text="0" Clicked="IncrementaBattutaNeutro" />
+                                        <Button Text="-1" Clicked="IncrementaBattutaNegativo" />
+                                    </StackLayout>
+
+                                    <StackLayout Grid.Row="1" Grid.Column="4" Orientation="Horizontal" HorizontalOptions="Center">
+                                        <Button Text="+1" Clicked="IncrementaMuroPositivo" />
+                                        <Button Text="0" Clicked="IncrementaMuroNeutro" />
+                                        <Button Text="-1" Clicked="IncrementaMuroNegativo" />
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label x:Name="lblSquadra"
+                   FontFamily="Courier New"
+                   FontSize="12"
+                   TextColor="Black"
+                   LineBreakMode="CharacterWrap"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Start"
+                   Margin="10"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

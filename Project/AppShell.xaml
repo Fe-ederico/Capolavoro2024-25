@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Project.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Project"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Project"
+    BackgroundColor="ForestGreen"
+    Shell.TitleColor="MintCream">
+
+    <TabBar>
+        <Tab Title="Home" Icon="casa.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage" />
+        </Tab>
+        <Tab Title="Crea" Icon="plus.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:AggSquadra}"
+                Route="AggSquadra" />
+        </Tab>
+        <Tab Title="Stats" Icon="pngegg.png">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:StatisticheGiocatori}"
+                Route="AggSquadra" />
+        </Tab>
+    </TabBar>
+
+</Shell>

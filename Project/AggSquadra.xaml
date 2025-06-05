@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.AggSquadra"
+             Title="Aggiungi Squadra"
+             Background="LightGreen">
+    <VerticalStackLayout HorizontalOptions="Center" Padding="40" Spacing="10">
+        <Label Text="Inserisci giocatore" HorizontalOptions="Center" FontSize="Large" TextColor="White"/>
+
+        <HorizontalStackLayout Spacing="20">
+            <Label Text="Cognome" WidthRequest="100" TextColor="White" />
+            <Entry Placeholder="Inserisci cognome" WidthRequest="200" x:Name="cognomeEntry" PlaceholderColor="White"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="20">
+            <Label Text="Nome" WidthRequest="100" TextColor="White"/>
+            <Entry Placeholder="Inserisci nome" WidthRequest="200" x:Name="nomeEntry" PlaceholderColor="White"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Spacing="20">
+            <Label Text="N° Maglia" WidthRequest="100" TextColor="White"/>
+            <Entry Placeholder="Inserisci Numero" WidthRequest="200" x:Name="numeroMagliaEntry" PlaceholderColor="White"/>
+        </HorizontalStackLayout>
+        <VerticalStackLayout>
+            <Label Text="Visualizza Squadra" HorizontalOptions="Center" FontSize="Large" TextColor="White" />
+            <Label x:Name="lblSquadra" HorizontalOptions="Center" WidthRequest="300"/>
+
+        </VerticalStackLayout>
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center" Padding="-20">
+            <Button Text="Salva Giocatore" BackgroundColor="White"  Clicked="Button_Clicked" TextColor="Black"/>
+            <Button Text="Elimina" BackgroundColor="White" Clicked="Cancella" TextColor="Black"/>
+            <Button Text="Salva Squadra" BackgroundColor="White" Clicked="SalvaSuFile" TextColor="Black"/>
+        </HorizontalStackLayout>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>

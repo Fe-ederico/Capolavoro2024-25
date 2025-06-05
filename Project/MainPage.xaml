@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.MainPage"
+             Title="Volleyball scouter"
+             BackgroundColor="LightGreen">
+
+    <VerticalStackLayout HorizontalOptions="Center"
+                         Spacing="30"
+                         Padding="40">
+        <Button Text="Inizia Partita"
+                BackgroundColor="MintCream"
+                TextColor="Black"
+                FontSize="Medium"
+                Clicked="OnNavigaClicked"
+                WidthRequest="300"
+                />
+        <Button Text="Vedi squadre"
+                TextColor="Black"
+                BackgroundColor="White"
+                FontSize="Small"
+                Clicked="Pulssquad"
+                VerticalOptions="End"
+                />
+        <Button Text="Resetta"
+                TextColor="Black"
+                BackgroundColor="White"
+                FontSize="Small"
+                WidthRequest="100"
+                Clicked="SvuotaFile"
+                VerticalOptions="End"
+                ></Button>
+
+    </VerticalStackLayout>
+</ContentPage>
